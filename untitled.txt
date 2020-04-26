@@ -1,0 +1,23 @@
+Comida:
+Tablas:
+    - Cocina (alemana, mexicana, japonesa, india)
+        - Ingredientes (longtext)
+        - Vegana (boolean)
+        - Maridaje (varchar, 20)
+    - Tiempo(entrada, postre, plato fuerte, etc)
+        - Caliente / frío (Binary)
+        - Porciones (tinyint, 2)
+        - Utencilios (Boolean)
+    - Momento del día
+        - Sabor (Dulce, salado, picoso) (varchar)
+        - Fast food? (boolean)
+        - Caliente / frío (Binary)
+    - Comanda
+        - ID comanda (varchar (10))
+        - Número de órdenes (tinyint, 2)
+        - Costo (decimal, 4,2)
+        - ID mesero (tinyint, 2)
+        - Forma de pago (Binary)
+    
+    
+    
