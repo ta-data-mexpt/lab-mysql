@@ -37,7 +37,7 @@ CREATE TABLE salespersons(
     name VARCHAR(50),
     store VARCHAR(40)
 );
-SHOW COLUMNS FROM customers;
+SHOW COLUMNS FROM salespersons;
 
 CREATE TABLE invoices(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
