@@ -1,0 +1,48 @@
+DROP SCHEMA IF EXISTS lab_mysql;
+
+CREATE SCHEMA lab_mysql;
+
+use lab_mysql;
+
+CREATE TABLE Customer (
+  customer_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  customer_name VARCHAR(45) NOT NULL,
+  phone VARCHAR(45) NOT NULL,
+  email VARCHAR(45) NOT NULL,
+  adress VARCHAR(45) NOT NULL,
+  city VARCHAR(45) NOT NULL,
+  state VARCHAR(45) NOT NULL,
+  country VARCHAR(45) NOT NULL,
+  zip_code VARCHAR(45) NOT NULL,
+  PRIMARY KEY (customer_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE Car (
+  car_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  manufacturer VARCHAR(45) NOT NULL,
+  model VARCHAR(45) NOT NULL,
+  car_year INT NOT NULL,
+  color VARCHAR(45) NOT NULL,
+  PRIMARY KEY (car_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE Staff (
+  staff_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  staff_name VARCHAR(45) NOT NULL,
+  company VARCHAR(45) NOT NULL,
+  PRIMARY KEY (staff_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*CONSTRAINT fk_customer_address FOREIGN KEY (address_id) REFERENCES address (address_id) ON DELETE RESTRICT ON UPDATE CASCADE,*/
+
+CREATE TABLE Invoices (
+  invoice_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  invoice_date DATE NOT NULL,
+  car_id SMALLINT UNSIGNED NOT NULL,
+  customer_id SMALLINT UNSIGNED NOT NULL,
+  staff_id SMALLINT UNSIGNED NOT NULL,
+  PRIMARY KEY (invoice_id),
+  FOREIGN KEY (car_id) REFERENCES Car (car_id),
+  FOREIGN KEY (customer_id) REFERENCES Customer (customer_id),
+  FOREIGN KEY (staff_id) REFERENCES Staff (staff_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
