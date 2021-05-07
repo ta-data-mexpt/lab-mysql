@@ -1,0 +1,32 @@
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('3K096I98581DHSNUP','Volkswagen','Tiguan',2019,'Blue');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('ZM8G7BEUQZ97IH46V','Peugeot','Rifter',2019,'Red');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('RKXVNNIHLVVZOUB4M','Ford','Fusion',2018,'White');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('HKNDGS7CU31E9Z7JW','Toyota','RAV4',2018,'Silver');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('DAM41UDN3CHU2WVF6','Volvo','v60',2019,'Gray');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('DAM41UDN3CHU2WVF6','Volvo','v60 Cross Coutry',2019,'Gray');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('3K096I98581DHSNUP','Nissan','Altima',2020,'Wine');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('ZM8G7BEUQZ97IH46V','Hyundai','Elantra',2019,'Blue');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('RKXVNNIHLVVZOUB4M','Kia','Sorrento',2020,'White');
+INSERT INTO CARS (vin, manufacturer, model, year, color) VALUES('HKNDGS7CU31E9Z7JW','Jeep','Cherokee',2019,'Black');
+/*SELECT * FROM CARS;*/
+
+INSERT INTO CUSTOMERS(CUSTOMER_ID, NAME, PHONE, EMAIL, ADDRESS, CITY, STATE_PROVINCE, COUNTRY, POSTAL) VALUES(10001, 'Pablo Picasso', '34636176382', 'picasso@mail.com', 'Paseo de la Chopera, 14', 'Madrid', 'Madrid', 'Spain', '28045');
+INSERT INTO CUSTOMERS(CUSTOMER_ID, NAME, PHONE, EMAIL, ADDRESS, CITY, STATE_PROVINCE, COUNTRY, POSTAL) VALUES(20001, 'Abraham Lincoln', '3059077086', 'abraham.lincon@gov.us', '120 SW 8th St', 'Miami', 'Florida', 'United States', '33130');
+INSERT INTO CUSTOMERS(CUSTOMER_ID, NAME, PHONE, EMAIL, ADDRESS, CITY, STATE_PROVINCE, COUNTRY, POSTAL) VALUES(30001, 'Napoléon Bonaparte', '33179754000', 'napoleon.bon@gouvernement.fr', '40 Rue du Colisée', 'Paris', 'Île-de-France', 'France', '75008');
+INSERT INTO CUSTOMERS(CUSTOMER_ID, NAME, PHONE, EMAIL, ADDRESS, CITY, STATE_PROVINCE, COUNTRY, POSTAL) VALUES(40001, 'Ramon Hernandez', '1525512345678', 'ramon.hdz@ironhack.com', 'Montes Urales 55', 'Mexico', 'CDMX', 'Mexico', '11700');
+/*SELECT * FROM customers;*/
+
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00001' ,'Petey Cruiser' ,'Madrid');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00002' ,'Anna Sthesia' ,'Barcelona');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00003' ,'Paul Molive' ,'Berlin');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00004' ,'Gail Forcewind' ,'Paris');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00005' ,'Paige Turner' ,'Mimia');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00006' ,'Bob Frapples' ,'Mexico City');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00007' ,'Walter Melon' ,'Amsterdam');
+INSERT INTO SALESPERSONS(STAFF_ID, NAME, STORE) VALUES('00008' ,'Shonda Leer' ,'São Paulo');
+/*SELECT * FROM SALESPERSONS;*/
+
+INSERT INTO INVOICES (INVOICE_NUMBER, INVOICE_DATE, CARS_ID, ID, CUSTOMER_ID, SALESPERSON_ID) VALUES(5239903,'2018-08-22',1, 1, 10001, 1);
+INSERT INTO INVOICES (INVOICE_NUMBER, INVOICE_DATE, CARS_ID, ID, CUSTOMER_ID, SALESPERSON_ID) VALUES(3116652, '2018-12-31', 3, 2,  20001, 5);
+INSERT INTO INVOICES (INVOICE_NUMBER, INVOICE_DATE, CARS_ID, ID, CUSTOMER_ID, SALESPERSON_ID) VALUES(7113510, '2019-01-22', 6, 3, 30001, 7);
+/*SELECT * FROM INVOICES;*/
